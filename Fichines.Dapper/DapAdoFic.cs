@@ -1,5 +1,6 @@
 using System.Data;
 using Dapper;
+using Fichines.core.Tablas;
 using MySqlConnector;
 
 namespace Fichines.core.Dapper;
@@ -11,20 +12,32 @@ public class DapAdoFic : IAdoFichin
 
     #region Usuario
 
-    private static readonly string _queryCientePas
+    private static readonly string _queryUsuarioPas
         = @"SELECT  *
             FROM    Usuario
             WHERE   Dni = @unCDNI
             AND     pasword = SHA2(@unPasw, 256)
             LIMIT   1";
-    private static readonly string _queryAltaCajero
-        = @"INSERT INTO Cajero VALUES (@dni, @nombre, @apellido, @pass)";
+    private static readonly string _queryRegistrarUsuario
+        = @"INSERT INTO Usuario VALUES (@dni, @nombre, @apellido, @mail, @pasword)";
 
-    public void AltaFichin(Fichin fichin)
+
+    public void RegistrarUsuario(Tablas.Usuario usuario)
+    =>_conexion.Execute(_
+                _queryRegistrarUsuario,
+                new
+                {
+                    dni = usuario.Dni,
+                    nombre = usuario.Nombre,
+                    apellido = usuario.Apellido,
+                    mail = usuario.Mail,
+                    pasword = pasword
+                }
+            );
+    
+
+    public Tablas.Usuario? UsuarioPorDni()
     {
         throw new NotImplementedException();
     }
-
-    #endregion
-
 }

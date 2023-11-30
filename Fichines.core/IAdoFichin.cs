@@ -1,5 +1,8 @@
+using Fichines.core.Tablas;
+
 namespace Fichines.core;
 public interface IAdoFichin
 {
-    void AltaFichin(Fichin fichin);
+    void RegistrarUsuario(Usuario usuario);
+    Usuario? UsuarioPorDni();
 }
