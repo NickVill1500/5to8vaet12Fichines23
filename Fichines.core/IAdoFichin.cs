@@ -4,5 +4,5 @@ namespace Fichines.core;
 public interface IAdoFichin
 {
     void RegistrarUsuario(Usuario usuario);
-    Usuario? UsuarioPorDni();
+    Usuario? UsuarioPorDni(ushort Dni, string Pasword);
 }

@@ -1,6 +1,6 @@
-SOURCE 00 DER.sql
-SOURCE 01 SP.sql
-SOURCE 02 TR.sql
-SOURCE 03 SEIN.sql
-SOURCE 04 USR.sql
+SOURCE 00 DDL.sql
+SOURCE 01 SPF.sql
+SOURCE 02 Triggers.sql
+SOURCE 03 Inserts.sql
+SOURCE 04 User Grants.sql
 SET NAMES 'latin1';
