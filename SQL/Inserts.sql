@@ -18,4 +18,8 @@ CALL altaFichin (2, 'Metal Slug', '1996/04/19', 200.0);
 CALL altaFichin (3, 'Metal Slug 2', '1998/02/23', 200.0);
 CALL altaFichin (4, 'Metal Slug 3', '2000/03/23', 200.0);
 CALL altaFichin (5, 'Street Fighter', '1987/08/12', 250.0);
+
+CALL RegistrarUsuario (11561816, 'Gerente','Uno','gerentefichin@gmail.com','gerente1504');
+CALL RegistrarUsuario (45147808, 'Cajero', 'Uno','cajerofichin@gmail.com', 'cajero1504');
+CALL RegistrarUsuario (48552069,'Cliente','Uno','clientefichin@gmail.com', 'cliente1504');
 COMMIT;
