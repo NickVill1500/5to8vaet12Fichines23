@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Fichines.core;
+using Fichines.core.Dapper;
 using Xunit;
 
 namespace Fichines.TestDapper

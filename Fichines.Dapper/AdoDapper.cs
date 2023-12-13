@@ -1,5 +1,6 @@
 using System.Data;
 using Dapper;
+using Fichines.core.Dapper;
 using Fichines.core.Tablas;
 using MySqlConnector;
 
