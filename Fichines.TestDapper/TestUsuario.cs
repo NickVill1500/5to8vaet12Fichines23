@@ -8,7 +8,6 @@ namespace Fichines.TestDapper
 {
     public class TestUsuario
     {
-        /*
     [Theory]
     [InlineData(11561816,"Gerente", "Uno", "gerentefichin@gmail.com", "gerente1504")]
     public void TraerCLiente(byte dni, string nombre, string apellido, string mail, string pasword)
@@ -19,8 +18,6 @@ namespace Fichines.TestDapper
         Assert.Equal(nombre, usuario.Nombre);
         Assert.Equal<uint>(dni, usuario.Dni);
     }
-    */
-    /*
     [Fact]
     public void UsuarioPorDni()
     {
@@ -46,6 +43,6 @@ namespace Fichines.TestDapper
         
         Assert.NotNull(mismoUsuario);
         Assert.Equal(nombre, mismoUsuario.Nombre);
-        Assert.Equal(apellido, mismoUsuariov.Apellido); */
+        Assert.Equal(apellido, mismoUsuariov.Apellido);
     }
 }
