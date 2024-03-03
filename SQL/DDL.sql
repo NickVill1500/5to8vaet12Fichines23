@@ -1,3 +1,4 @@
+-- Active: 1686961781332@@127.0.0.1@3306
 DROP DATABASE IF EXISTS 5to_Fichines;
 
 CREATE DATABASE 5to_Fichines;
@@ -5,7 +6,7 @@ CREATE DATABASE 5to_Fichines;
 USE 5to_Fichines;
 CREATE TABLE
     Usuario(
-        DNI SMALLINT UNSIGNED NOT NULL,
+        DNI INT UNSIGNED NOT NULL,
         nombre VARCHAR(45) NOT NULL,
         apellido VARCHAR(45) NOT NULL,
         mail VARCHAR(45) NOT NULL,
@@ -15,7 +16,7 @@ CREATE TABLE
 CREATE TABLE
     Tarjeta(
         idTarjeta SMALLINT UNSIGNED NOT NULL,
-        DNI SMALLINT UNSIGNED NOT NULL,
+        DNI INT UNSIGNED NOT NULL,
         saldo DECIMAL (5,2) NOT NULL,
         PRIMARY KEY (idTarjeta),
         CONSTRAINT fk_Tarjeta_Usuario FOREIGN KEY(DNI) REFERENCES Usuario(DNI)

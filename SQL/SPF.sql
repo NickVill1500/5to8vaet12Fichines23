@@ -1,3 +1,4 @@
+-- Active: 1686961781332@@127.0.0.1@3306@5to_fichines
 -- Realizar los SP para dar de alta todas las entidades menos la tabla Cliente.
 
 DELIMITER $$
@@ -36,10 +37,10 @@ END $$
 
 DELIMITER $$
 DROP PROCEDURE IF EXISTS registrarUsuario $$
-CREATE PROCEDURE registrarUsuario (unUDNI SMALLINT, unUNombre VARCHAR(45), unUApellido VARCHAR(45), unMail VARCHAR(45), unPasw CHAR(64))
+CREATE PROCEDURE registrarUsuario (unUDNI INT, unUNombre VARCHAR(45), unUApellido VARCHAR(45), unMail VARCHAR(45), unPasw CHAR(64))
 BEGIN
     INSERT INTO Usuario (DNI, nombre, apellido, mail, pasword)
-        VALUES (unUDNI, unUNombre, unUApellido, unMail, SHA256(unPasw,256));
+        VALUES (unUDNI, unUNombre, unUApellido, unMail, SHA2(unPasw,256));
 END $$
 
 -- Se pide hacer el SP ‘RecaudacionPara’ que reciba por parámetro un identificador de fichin, se debe devolver la ganancia que tuvo entre esas 2 fechas (inclusive).
